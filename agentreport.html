@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>
+    online child help center
+</title>
+
+<style>
+body{
+    margin: 0;
+    color: rgb(184, 187, 36);
+}
+.container2{
+    width: 100vw;
+    height: 100vw;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    padding:10px;
+    box-sizing: border-box ;
+
+}
+.container2 div{
+    padding: 10px;
+    border: 1px solid #000;
+}
+header
+{
+    background-color: rgb(23, 184, 224);
+    margin: 0;
+	background: rgb(248, 250, 246);
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+.logo
+{
+    float: left;
+    padding: 10px 0;
+}
+.container
+{
+    width: 80%;
+    margin: 0 auto;
+}
+.linechart
+{grid-column-start:2;
+    grid-row-end: span 2;
+
+}
+.statistics{
+    grid-column-start:3;
+    grid-row-end: span 2;
+
+}
+
+nav{
+    float: right;
+}
+
+nav ul{
+    margin: 0%;
+    padding: 0%;
+    list-style-type: none;
+}
+nav li
+{
+    display:inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
+    position: relative;
+}
+nav a{
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+nav a::before{
+    content: "";
+    display: block;
+    height: 5px;
+    position: absolute;
+    width: 0%;
+    top: 0;
+    transition: all ease-in-out 250ms;
+    background-color: black;
+}
+nav a :hover{
+    color: #000;
+}
+nav a:hover::before
+{
+    width: 100%;
+}
+.rightsidebar{
+    background-color: bisque;
+    height: 600px;
+    margin-top: 200px;
+    width: 100px;
+    border-radius:5px;
+}
+header::after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+
+<link rel = "stylesheet" href= "/css/index.css">
+</href>
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <img class="logo" src="" alt="logo">
+            </div>
+            
+            <nav>
+            <ul class= "navigation_bar">
+                <li><a href ="#">Messages</a></li>
+                <li><a href ="#">Notifications</a></li>
+                <li><a href ="#">Services</a></li>
+    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!--the second container for profile picture using grid layout-->
+    <div class="container2">
+        <div class="Profile picture">profile picture</div>
+<div class="calls">calls pie chart</div>
+<div class="callspiechart">area of calls pie chart</div>
+<div class="sms">total calls button</div>
+<div class="linechart">linechart</div>
+<div class="statistics">statistics</div>
+<div class="calls">no of calls</div>
+
+    </div>
+<!--third container for no fo calls-->
+
+</body>
+</html>
