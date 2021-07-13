@@ -4,146 +4,11 @@
     online child help center
 </title>
 
-<style>
-body{
-    margin: 0;
-    color: rgb(184, 187, 36);
-}
-.call-btn{
-    font-family: sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: rgb(80, 98, 255);
-    width: 160px;
-    height: 100px;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin:0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-transform: uppercase;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition-duration: 0.3s;
-    -webkit-transition-property: box-shadow, transform;
-     transition-property:box shadowr,transform; 
-}
-.call-btn:hover,.call-btn:focus,.call-btn:active{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform:scale(1.1)
-}
-.container2{
-    width: 100vw;
-    height: 100vw;
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
-    padding:10px;
-    box-sizing: border-box ;
+<link rel = "stylesheet" href= "assets/css/index.css"></href>
+<script type="text/javascript"  href ="assets/js/agentreport.js"src="https://www.gstatic.com/charts/loader.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-}
-.container2 div{
-    padding: 10px;
-    border: 1px solid #000;
-}
-
-header
-{
-    background-color: rgb(23, 184, 224);
-    margin: 0;
-	background: rgb(248, 250, 246);
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 400;
-}
-
-.logo
-{
-    float: left;
-    padding: 10px 0;
-}
-.container
-{
-    width: 80%;
-    margin: 0 auto;
-}
-.linechart
-{grid-column-start:2;
-    grid-column-end: span 2;
-
-}
-.statistics{
-    grid-column-start:2;
-    grid-column-end: span 2;
-
-}
-
-nav{
-    float: right;
-}
-
-nav ul{
-    margin: 0%;
-    padding: 0%;
-    list-style-type: none;
-}
-nav li
-{
-    display:inline-block;
-    margin-left: 70px;
-    padding-top: 25px;
-    position: relative;
-}
-nav a{
-    color: rgb(7, 7, 7);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-nav a::before{
-    content: "";
-    display: block;
-    height: 5px;
-    position: absolute;
-    width: 0%;
-    top: 0;
-    transition: all ease-in-out 250ms;
-    background-color: black;
-}
-nav a :hover{
-    color: #000;
-}
-nav a:hover::before
-{
-    width: 100%;
-}
-.rightsidebar{
-    background-color: bisque;
-    height: 600px;
-    margin-top: 200px;
-    width: 100px;
-    border-radius:5px;
-}
-header::after
-{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-</style>
-
-<link rel = "stylesheet" href= "/css/index.css">
-</href>
 </head>
 <body>
     <header>
@@ -167,17 +32,57 @@ header::after
 
     <!--the second container for profile picture using grid layout-->
     <div class="container2">
-        <div class="Profile picture">profile picture</div>
+        <div class="Profile picture">profile picture
+            <div class="box">
+                <!--<div class="fas fa-user"><img src="./assets/images/emailling.png"></div>-->
+                <div class="notifications"></div>
+                <span class="num">4</span>
+            </div>
+        </div>
+
+        <!--the third container for calls button using grid layout-->
 <div class="calls">calls pie chart</div>
-<div class="callspiechart">area of calls pie chart</div>
-<div class="sms">total calls button
-    <button class="call-btn">Total no of sms</button>
+<div class="callspiechart"></div>
+<div class="sms">
+    <button id="close-image">
+        <img src="./assets/images/calling.png"></button>
+        <!--<button id="close-CSS"></button>-->
 </div>
-<div class="linechart">linechart</div>
-<div class="calls">no of calls
-    <button class="call-btn">no of calls</button>
+ <!--the forth container for calls button using grid layout-->
+<div class="linechart">linechart
+  
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <script>
+        var xValues = [50,60,70,80,90,100,110,120,130,140,150];
+        var yValues = [7,8,8,9,9,9,10,11,14,14,15];
+        
+        new Chart("myChart", {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [{
+              fill: false,
+              lineTension: 0,
+              backgroundColor: "rgba(0,0,255,1.0)",
+              borderColor: "rgba(0,0,255,0.1)",
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            scales: {
+              yAxes: [{ticks: {min: 6, max:16}}],
+            }
+          }
+        });
+        </script>
+</div>
+<div class="calls">
+    <button id="close-image"><img src="./assets/images/emailling.png"></button>
+    <!--<button class="call-btn">no of calls </button>-->
 </div>
 
+ <!--the fifth container for calls button using grid layout-->
 <div class="statistics">statistics</div>
 
     </div>
