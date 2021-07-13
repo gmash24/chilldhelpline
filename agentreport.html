@@ -9,6 +9,33 @@ body{
     margin: 0;
     color: rgb(184, 187, 36);
 }
+.call-btn{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(80, 98, 255);
+    width: 160px;
+    height: 100px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+     transition-property:box shadowr,transform; 
+}
+.call-btn:hover,.call-btn:focus,.call-btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform:scale(1.1)
+}
 .container2{
     width: 100vw;
     height: 100vw;
@@ -29,6 +56,7 @@ body{
     padding: 10px;
     border: 1px solid #000;
 }
+
 header
 {
     background-color: rgb(23, 184, 224);
@@ -50,12 +78,12 @@ header
 }
 .linechart
 {grid-column-start:2;
-    grid-row-end: span 2;
+    grid-column-end: span 2;
 
 }
 .statistics{
-    grid-column-start:3;
-    grid-row-end: span 2;
+    grid-column-start:2;
+    grid-column-end: span 2;
 
 }
 
@@ -142,10 +170,15 @@ header::after
         <div class="Profile picture">profile picture</div>
 <div class="calls">calls pie chart</div>
 <div class="callspiechart">area of calls pie chart</div>
-<div class="sms">total calls button</div>
+<div class="sms">total calls button
+    <button class="call-btn">Total no of sms</button>
+</div>
 <div class="linechart">linechart</div>
+<div class="calls">no of calls
+    <button class="call-btn">no of calls</button>
+</div>
+
 <div class="statistics">statistics</div>
-<div class="calls">no of calls</div>
 
     </div>
 <!--third container for no fo calls-->
