@@ -41,49 +41,148 @@
         </div>
 
         <!--the third container for calls button using grid layout-->
-<div class="calls">calls pie chart</div>
-<div class="callspiechart"></div>
+<div class="calls">
+    <canvas id="myChart2" style="width: 500px;;max-width:600px"></canvas>
+
+
+
+    <!--pie chart for total no of calls -->
+<script>
+var xValues = ["answered", "missed", "voice calls", "IVR calls"];
+var yValues = [55, 49, 44, 24];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#1e7145"
+];
+
+new Chart("myChart2", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "total number of calls"
+    }
+  }
+});
+</script>
+
+</div>
+  <!--pie chart for calls per location -->
+<div class="callspiechart">
+    <canvas id="myChart3" style="width: 500px;;max-width:600px"></canvas>
+
+    <script>
+    var xValues = ["Nairobi", "Mombasa", "Nyeri", "Kisumu"];
+    var yValues = [55, 49, 44, 24];
+    var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#1e7145"
+    ];
+    
+    new Chart("myChart3", {
+      type: "doughnut",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "calls per location"
+        }
+      }
+    });
+    </script>
+</div>
 <div class="sms">
     <button id="close-image">
         <img src="./assets/images/calling.png"></button>
         <!--<button id="close-CSS"></button>-->
 </div>
- <!--the forth container for calls button using grid layout-->
+
+
+ <!--the forth container for line chart calls-->
 <div class="linechart">linechart
   
     <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-    <script>
-        var xValues = [50,60,70,80,90,100,110,120,130,140,150];
-        var yValues = [7,8,8,9,9,9,10,11,14,14,15];
-        
-        new Chart("myChart", {
-          type: "line",
-          data: {
-            labels: xValues,
-            datasets: [{
-              fill: false,
-              lineTension: 0,
-              backgroundColor: "rgba(0,0,255,1.0)",
-              borderColor: "rgba(0,0,255,0.1)",
-              data: yValues
-            }]
-          },
-          options: {
-            legend: {display: false},
-            scales: {
-              yAxes: [{ticks: {min: 6, max:16}}],
-            }
-          }
-        });
-        </script>
+
+<script>
+var xValues = ["Monday", "Tuesday", "Wednesday","thursday","Friday","Saturday","Sunday"];
+var yValues = [55, 49, 44,31,26,0,12];
+var barColors = ["red", "green","blue","orange","pink","black","yellow"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Report analysis"
+    }
+  }
+});
+</script>
 </div>
+
+ <!--<button class="call-btn">no of calls </button>-->
+
+
+ <!--button for texts-->
 <div class="calls">
     <button id="close-image"><img src="./assets/images/emailling.png"></button>
-    <!--<button class="call-btn">no of calls </button>-->
+   
 </div>
 
  <!--the fifth container for calls button using grid layout-->
-<div class="statistics">statistics</div>
+<div class="statistics">statistics
+
+    <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Unattended", "Complete", "Pending"];
+var yValues = [55, 49, 44,];
+var barColors = ["red", "green","blue"];
+
+new Chart("myChart1", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Report analysis"
+    }
+  }
+});
+</script>
+</div>
 
     </div>
 <!--third container for no fo calls-->
