@@ -32,56 +32,19 @@
 
     <!--the second container for profile picture using grid layout-->
     <div class="container2">
-        <div class="Profile picture">profile picture
-            <div class="box">
-                <!--<div class="fas fa-user"><img src="./assets/images/emailling.png"></div>-->
-                <div class="notifications"></div>
-                <span class="num">4</span>
-            </div>
+    <div class="wrapper"></div>
+
+
+    <!--TOTAL CASES BUTTON-->
+
+    <div class="sms">
+      <button id="close-image"></button>
         </div>
-
-        <!--the third container for calls button using grid layout-->
-<div class="calls">
-    <canvas id="myChart2" style="width: 500px;;max-width:600px"></canvas>
-
-
-
-    <!--pie chart for total no of calls -->
-<script>
-var xValues = ["answered", "missed", "voice calls", "IVR calls"];
-var yValues = [55, 49, 44, 24];
-var barColors = [
-  "#b91d47",
-  "#00aba9",
-  "#2b5797",
-  "#1e7145"
-];
-
-new Chart("myChart2", {
-  type: "doughnut",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    title: {
-      display: true,
-      text: "total number of calls"
-    }
-  }
-});
-</script>
-
-</div>
-  <!--pie chart for calls per location -->
-<div class="callspiechart">
-    <canvas id="myChart3" style="width: 500px;;max-width:600px"></canvas>
-
-    <script>
-    var xValues = ["Nairobi", "Mombasa", "Nyeri", "Kisumu"];
+        <!--TOTAL CASSES PIE CHART-->
+        <canvas id="myChart2" style="width: 400px;;max-width:400px"></canvas>  
+      <!--pie chart for total no of calls -->
+        <script>
+    var xValues = ["answered", "missed", "voice calls", "IVR calls"];
     var yValues = [55, 49, 44, 24];
     var barColors = [
       "#b91d47",
@@ -89,8 +52,7 @@ new Chart("myChart2", {
       "#2b5797",
       "#1e7145"
     ];
-    
-    new Chart("myChart3", {
+    new Chart("myChart2", {
       type: "doughnut",
       data: {
         labels: xValues,
@@ -102,90 +64,160 @@ new Chart("myChart2", {
       options: {
         title: {
           display: true,
-          text: "calls per location"
+          text: "total number of calls"
         }
       }
     });
     </script>
-</div>
-<div class="sms">
-    <button id="close-image">
-        <img src="./assets/images/calling.png"></button>
-        <!--<button id="close-CSS"></button>-->
-</div>
+        
+          <!--pie chart for calls per location -->
+            <canvas id="myChart3" style="width: 400px;;max-width:400px"></canvas>
+        
+        <script>
+        var xValues = ["Nairobi", "Mombasa", "Nyeri", "Kisumu"];
+        var yValues = [55, 49, 44, 24];
+        var barColors = [
+          "#b91d47",
+          "#00aba9",
+          "#2b5797",
+          "#1e7145"
+        ];
+        
+        new Chart("myChart3", {
+          type: "doughnut",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            title: {
+              display: true,
+              text: "calls per location"
+            }
+          }
+        });
+        </script>
+        <!--CALLS BUTTON-->
+        <div class="sms">
+          <button id="close-image"></button>
+              
+            </div>
 
+            <!-- CALLS lINE graph-->
+            
+            
+  
+              <canvas id="myChart" style="width:100%;max-width:400px"></canvas>
+          
+          <script>
+          var xValues = ["Monday", "Tuesday", "Wednesday","thursday","Friday","Saturday","Sunday"];
+          var yValues = [55, 49, 44,31,26,0,12];
+          var barColors = ["red", "green","blue","orange","pink","black","yellow"];
+          
+          new Chart("myChart", {
+            type: "bar",
+            data: {
+              labels: xValues,
+              datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+              }]
+            },
+            options: {
+              legend: {display: false},
+              title: {
+                display: true,
+                text: "Report analysis"
+              }
+            }
+          });
+          </script>             
+      
+                          <!--REPORT ANALYSIS BAR GRAPH-->
+
+            <canvas id="myChart1" style="width:100%;max-width:400px"></canvas>
+        
+        <script>
+        var xValues = ["Unattended", "Complete", "Pending"];
+        var yValues = [55, 49, 44,];
+        var barColors = ["red", "green","blue"];
+        
+        new Chart("myChart1", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+              text: "Report analysis"
+            }
+          }
+        });
+        </script>
+
+                  
+
+            
+            
+              
+            <!--  SMS BUTTON-->
+            <div class="sms">
+              <button id="close-image"></button>
+                  
+                </div>
+                
+                <div class="callspiechart">
+                  <canvas id="myChart3" style="width: 300px;;max-width:200px"></canvas>
+                </div>  
+
+    </div>
+    
+        </div>
+        
+                <!--<button id="close-CSS"></button>-->
+                <div class="calls">
+                    <button id="close-image"><img src="./assets/images/emailling.png"></button>
+                   
+                </div>
+
+        </div>
+            
+    
+        </div>
+
+ <!--button for texts-->
+ 
+
+        <!--the third container for calls button using grid layout-->
+
+  <!--pie chart for calls per location -->
+
+  
 
  <!--the forth container for line chart calls-->
-<div class="linechart">linechart
-  
-    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-
-<script>
-var xValues = ["Monday", "Tuesday", "Wednesday","thursday","Friday","Saturday","Sunday"];
-var yValues = [55, 49, 44,31,26,0,12];
-var barColors = ["red", "green","blue","orange","pink","black","yellow"];
-
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "Report analysis"
-    }
-  }
-});
-</script>
-</div>
 
  <!--<button class="call-btn">no of calls </button>-->
 
-
- <!--button for texts-->
+<!--button for texts-->
 <div class="calls">
     <button id="close-image"><img src="./assets/images/emailling.png"></button>
    
 </div>
 
  <!--the fifth container for calls button using grid layout-->
-<div class="statistics">statistics
-
-    <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
-
-<script>
-var xValues = ["Unattended", "Complete", "Pending"];
-var yValues = [55, 49, 44,];
-var barColors = ["red", "green","blue"];
-
-new Chart("myChart1", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "Report analysis"
-    }
-  }
-});
-</script>
-</div>
 
     </div>
+  </div>
 <!--third container for no fo calls-->
-
+</div>
 </body>
 </html>
